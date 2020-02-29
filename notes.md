@@ -51,3 +51,9 @@ Time to take a 5 minute break
 1:00 Still doing CSS to get font size, padding, etc.. to look right
 
 1:30 Start work on a Thumbnail component that provides fallbacks for self, default, or nsfw thumbnails, along with the 
+
+1:45 more CSS work to do some cleanup some flexbox wonkiness
+
+2:00 Basic home design done, going to work on voting buttons
+
+2:25 Button styling done

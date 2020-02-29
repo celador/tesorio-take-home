@@ -3,13 +3,18 @@ import styled from "styled-components";
 import moment from "moment";
 import numeral from "numeral";
 import Thumb from "./thumbnail";
+import Vote from "./vote";
 
 export default function({ data }) {
   return (
     <A href={data.url}>
       <li>
         <Post>
-          <Score>{numeral(data.score).format("0.0a")}</Score>
+          <Voting>
+            <Vote kind="up" />
+            <Score>{numeral(data.score).format("0.0a")}</Score>
+            <Vote kind="down" />
+          </Voting>
           <Detail>
             <Thumbnail>
               <Thumb data={data} />
@@ -40,6 +45,14 @@ export default function({ data }) {
   );
 }
 
+const Voting = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex: 0 0 3rem;
+`;
+
 const Post = styled.div`
   display: flex;
   align-items: center;
@@ -65,9 +78,7 @@ const A = styled.a`
   color: gray;
 `;
 
-const Score = styled.div`
-  flex: 0 0 3rem;
-`;
+const Score = styled.div``;
 
 const Thumbnail = styled.div`
   flex: 0 0 140px;

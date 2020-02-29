@@ -47,3 +47,7 @@ Time to take a 5 minute break
 12:20 I'm realizing that I should probably use CSS Grid instead of flexbox for the posts/links.  Going to take a break to think about it.
 
 12:25 I'm going to forge ahead with flexbox, assuming this probably isn't ideal, but we're 2 1/2 hours into a 3-4 hour task and I'm not half way done. 
+
+1:00 Still doing CSS to get font size, padding, etc.. to look right
+
+1:30 Start work on a Thumbnail component that provides fallbacks for self, default, or nsfw thumbnails, along with the 

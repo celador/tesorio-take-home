@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./home";
 import Detail from "./detail";
 
@@ -7,7 +7,7 @@ export default function App() {
   return (
     <Router>
       <div>
-        <nav>
+        {/*  <nav>
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -16,7 +16,7 @@ export default function App() {
               <Link to="/detail">Detail</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
 
         <Switch>
           <Route path="/detail">

@@ -34,7 +34,9 @@ export default function({ data }) {
                     ago by <Author>{data.author}</Author> to{" "}
                     <Subreddit>r/{data.subreddit}</Subreddit>
                   </div>
-                  <div>{data.num_comments} comments</div>
+                  <a href={`https://www.reddit.com/${data.permalink}`}>
+                    {data.num_comments} comments
+                  </a>
                 </Submission>
               </Row>
             </Block>

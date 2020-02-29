@@ -56,4 +56,4 @@ Time to take a 5 minute break
 
 2:00 Basic home design done, going to work on voting buttons
 
-2:25 Button styling done
+2:25 Button styling done.  Taking a break.

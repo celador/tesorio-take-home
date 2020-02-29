@@ -41,18 +41,18 @@ const Button = styled.span`
   }
 `;
 
-export default function({ kind }) {
+export default function({ kind, vote }) {
   switch (kind) {
     case "down":
       return (
-        <Button>
+        <Button onClick={vote}>
           <Downvote className="icon icon-downvote"></Downvote>
         </Button>
       );
 
     default:
       return (
-        <Button>
+        <Button onClick={vote}>
           <Upvote className="icon icon-upvote"></Upvote>
         </Button>
       );

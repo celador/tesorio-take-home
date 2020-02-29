@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { gray, up, down } from "./../services/colors";
 
 const Upvote = styled.i`
   font-style: normal;
@@ -30,30 +31,47 @@ const Button = styled.span`
   justify-content: center;
 
   &:hover {
-    background-color: #1a1a1b1a;
+    background-color: ${gray};
 
     & ${Upvote} {
-      color: #cc3700;
+      color: ${up};
     }
     & ${Downvote} {
-      color: #5a75cc;
+      color: ${down};
+    }
+  }
+
+  & {
+    & ${Upvote}.selected {
+      color: ${up};
+    }
+    & ${Downvote}.selected {
+      color: ${down};
     }
   }
 `;
 
-export default function({ kind, vote }) {
+export default function({ kind, liked, onClick }) {
   switch (kind) {
     case "down":
       return (
-        <Button onClick={vote}>
-          <Downvote className="icon icon-downvote"></Downvote>
+        <Button onClick={onClick}>
+          <Downvote
+            className={`icon icon-downvote ${liked !== undefined &&
+              !liked &&
+              "selected"}`}
+          ></Downvote>
         </Button>
       );
 
     default:
       return (
-        <Button onClick={vote}>
-          <Upvote className="icon icon-upvote"></Upvote>
+        <Button onClick={onClick}>
+          <Upvote
+            className={`icon icon-upvote ${liked !== undefined &&
+              liked &&
+              "selected"}`}
+          ></Upvote>
         </Button>
       );
   }

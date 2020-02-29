@@ -1,20 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import moment from "moment";
-import numeral from "numeral";
 import Thumb from "./thumbnail";
-import Vote from "./vote";
+import Score from "./score";
 
 export default function({ data }) {
   return (
     <li>
-      <A href={data.url}>
-        <Post>
-          <Voting>
-            <Vote kind="up" />
-            <Score>{numeral(data.score).format("0.0a")}</Score>
-            <Vote kind="down" />
-          </Voting>
+      <Post>
+        <Score score={data.score} />
+        <A href={data.url}>
           <Detail>
             <Thumbnail>
               <Thumb data={data} />
@@ -48,19 +43,11 @@ export default function({ data }) {
               </Row>
             </Block>
           </Detail>
-        </Post>
-      </A>
+        </A>
+      </Post>
     </li>
   );
 }
-
-const Voting = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  flex: 0 0 3rem;
-`;
 
 const Post = styled.div`
   display: flex;
@@ -86,8 +73,6 @@ const A = styled.a`
   text-decoration: none;
   color: gray;
 `;
-
-const Score = styled.div``;
 
 const Thumbnail = styled.div`
   flex: 0 0 140px;

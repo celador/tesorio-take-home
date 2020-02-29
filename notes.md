@@ -38,22 +38,26 @@ Time to take a 5 minute break
 
 11:30 Back at it.
 
-12:00 Working with the posts contents, have to find a way to calculate the "tiome since posted" value.  JavaScript and time is a pain, time to add moment with `yarn add moment`
+12:00 Working with the posts contents, have to find a way to calculate the "tiome since posted" value. JavaScript and time is a pain, time to add moment with `yarn add moment`
 
 12:10 Working with number formatting for score, lets bring in numeral with `yarn add numeral`
 
-12:15 The "spec" provided for the take-home has a couple screenshots of the Reddit homepage, or at least the way it used to be. The current page bears little resemblance to the spec. Not having an actual design file or even a higher resolution screenshot is slowing me down, because I have to guess as sizes, colors, fonts, weights, etc... 
+12:15 The "spec" provided for the take-home has a couple screenshots of the Reddit homepage, or at least the way it used to be. The current page bears little resemblance to the spec. Not having an actual design file or even a higher resolution screenshot is slowing me down, because I have to guess as sizes, colors, fonts, weights, etc...
 
-12:20 I'm realizing that I should probably use CSS Grid instead of flexbox for the posts/links.  Going to take a break to think about it.
+12:20 I'm realizing that I should probably use CSS Grid instead of flexbox for the posts/links. Going to take a break to think about it.
 
-12:25 I'm going to forge ahead with flexbox, assuming this probably isn't ideal, but we're 2 1/2 hours into a 3-4 hour task and I'm not half way done. 
+12:25 I'm going to forge ahead with flexbox, assuming this probably isn't ideal, but we're 2 1/2 hours into a 3-4 hour task and I'm not half way done.
 
 1:00 Still doing CSS to get font size, padding, etc.. to look right
 
-1:30 Start work on a Thumbnail component that provides fallbacks for self, default, or nsfw thumbnails, along with the 
+1:30 Start work on a Thumbnail component that provides fallbacks for self, default, or nsfw thumbnails, along with the
 
 1:45 more CSS work to do some cleanup some flexbox wonkiness
 
 2:00 Basic home design done, going to work on voting buttons
 
-2:25 Button styling done.  Taking a break.
+2:25 Button styling done.
+
+2:45 Cleanup code and Add links for Author and Subreddit. Taking a break.
+
+3:05 Start click side up/down vote

@@ -7,8 +7,8 @@ import Vote from "./vote";
 
 export default function({ data }) {
   return (
-    <A href={data.url}>
-      <li>
+    <li>
+      <A href={data.url}>
         <Post>
           <Voting>
             <Vote kind="up" />
@@ -31,8 +31,18 @@ export default function({ data }) {
                 <Submission>
                   <div>
                     submitted {moment.unix(data.created_utc).fromNow()} hours
-                    ago by <Author>{data.author}</Author> to{" "}
-                    <Subreddit>r/{data.subreddit}</Subreddit>
+                    ago by{" "}
+                    <Author>
+                      <a href={`https://www.reddit.com/user/${data.author}`}>
+                        {data.author}
+                      </a>
+                    </Author>{" "}
+                    to{" "}
+                    <Subreddit>
+                      <a href={`https://www.reddit.com/r/${data.subreddit}`}>
+                        r/{data.subreddit}
+                      </a>
+                    </Subreddit>
                   </div>
                   <a href={`https://www.reddit.com/${data.permalink}`}>
                     {data.num_comments} comments
@@ -42,8 +52,8 @@ export default function({ data }) {
             </Block>
           </Detail>
         </Post>
-      </li>
-    </A>
+      </A>
+    </li>
   );
 }
 

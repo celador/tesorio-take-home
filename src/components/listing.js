@@ -3,7 +3,7 @@ import Provider from "./provider";
 import styled from "styled-components";
 
 const List = styled.ol`
-  list-style: decimal;
+  list-style: none;
 `;
 
 export default function({ data }) {

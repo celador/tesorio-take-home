@@ -25,9 +25,6 @@ export default function({ data }) {
                 <Domain>({data.domain})</Domain>
               </Description>
               <Row>
-                {/* <div>
-                  <button>play</button>
-                </div> */}
                 <Submission>
                   <div>
                     submitted {moment.unix(data.created_utc).fromNow()} hours

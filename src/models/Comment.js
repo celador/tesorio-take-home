@@ -1,3 +1,5 @@
+import moment from "moment";
+
 export default class Comment {
   constructor() {
     Object.assign(this, {
@@ -64,10 +66,10 @@ export default class Comment {
         num_reports: null,
         locked: false,
         name: null,
-        created: Date.now(),
+        created: moment().unix(),
         author_flair_text: null,
         collapsed: false,
-        created_utc: Date.UTC(),
+        created_utc: moment().unix(),
         subreddit_name_prefixed: "",
         controversiality: 0,
         depth: 1,

@@ -35,7 +35,7 @@ export default function(props) {
     if (!data.replies) {
       data.replies = new Listing();
     }
-    data.replies.data.children.push(comment);
+    data.replies.data.children.unshift(comment);
     setData(data);
     setReplying(false);
   };
@@ -43,7 +43,8 @@ export default function(props) {
   const cancel = () => {
     setReplying(false);
   };
-
+  console.log(data.created_utc);
+  console.log(moment().unix());
   return (
     <li>
       <Wrapper ref={comment}>

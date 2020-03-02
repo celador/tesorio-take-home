@@ -21,7 +21,6 @@ export default function({ json }) {
           return <div></div>;
         default:
           console.log(typeof json, json);
-          console.log(json);
           return <Spinner />;
       }
   }

@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import styled from "styled-components";
+import pluralize from "pluralize";
 import moment from "moment";
 import numeral from "numeral";
 
@@ -15,6 +16,7 @@ const Reply = styled.textarea`
 export default function(props) {
   const [replying, setReplying] = useState(false);
   const [data, setData] = useState(props.data);
+  const [score, setScore] = useState(data.score);
   const reply = useRef(null);
   const comment = useRef(null);
 
@@ -42,12 +44,13 @@ export default function(props) {
   return (
     <li>
       <Wrapper ref={comment}>
-        <Score score={data.score} />
+        <Score score={score} setScore={setScore} />
         <Detail>
           <Block>
             <Description>
               <Author>
-                {data.author} {numeral(data.score).format("0")} {} points{" "}
+                {data.author} {numeral(score).format("0")}{" "}
+                {pluralize("point", score)}{" "}
               </Author>
               <div>{moment.unix(data.created_utc).fromNow()}</div>
             </Description>

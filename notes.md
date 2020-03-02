@@ -80,3 +80,5 @@ One thing I've thought about was the part of the challenge that said not to worr
 9:25 Got recursive comments displaying.  Working on scoring and styling.
 
 9:35 Scoring works.  Starting work on replying to comments.
+
+11:25 QA and finishing up. Taking a break.

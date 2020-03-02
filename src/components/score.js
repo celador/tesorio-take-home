@@ -16,8 +16,7 @@ const Voting = styled.div`
     color: initial;
   }
 `;
-export default function({ score }) {
-  const [value, setValue] = useState(score);
+export default function({ score, setScore }) {
   const [liked, setLiked] = useState();
   return (
     <Voting>
@@ -25,30 +24,36 @@ export default function({ score }) {
         kind="up"
         liked={liked}
         onClick={() => {
-          if (liked === undefined || liked === false) {
+          if (liked === undefined) {
             setLiked(true);
-            setValue(score + 1);
+            setScore(score + 1);
+          } else if (liked === false) {
+            setLiked(true);
+            setScore(score + 2);
           } else {
             setLiked(undefined);
-            setValue(score);
+            setScore(score - 1);
           }
         }}
       />
-      {value >= 1000 ? (
-        <div className="score">{numeral(value).format("0.0a")}</div>
+      {score >= 1000 ? (
+        <div className="score">{numeral(score).format("0.0a")}</div>
       ) : (
-        <div className="score">{numeral(value).format("0")}</div>
+        <div className="score">{numeral(score).format("0")}</div>
       )}
       <Vote
         kind="down"
         liked={liked}
         onClick={() => {
-          if (liked === undefined || liked === true) {
+          if (liked === undefined) {
             setLiked(false);
-            setValue(score - 1);
+            setScore(score - 1);
+          } else if (liked === true) {
+            setLiked(false);
+            setScore(score - 2);
           } else {
             setLiked(undefined);
-            setValue(score);
+            setScore(score + 1);
           }
         }}
       />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import moment from "moment";
 import Thumb from "./thumbnail";
@@ -6,10 +6,11 @@ import Score from "./score";
 import { Link } from "react-router-dom";
 
 export default function({ data }) {
+  const [score, setScore] = useState(data.score);
   return (
     <li>
       <Post>
-        <Score score={data.score} />
+        <Score score={score} setScore={setScore} />
         <Detail>
           <A href={data.url}>
             <Thumbnail>

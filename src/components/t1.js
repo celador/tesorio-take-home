@@ -12,12 +12,6 @@ const Reply = styled.textarea`
   width: 100%;
 `;
 
-const newComment = function(value) {
-  const comment = new Comment();
-  comment.data.body = value;
-  return comment;
-};
-
 export default function(props) {
   const [replying, setReplying] = useState(false);
   const [data, setData] = useState(props.data);
@@ -30,12 +24,13 @@ export default function(props) {
 
   const save = () => {
     const { value } = reply.current;
-    const comment = newComment(value);
+    const comment = new Comment();
+    comment.data.body = value;
 
     if (!data.replies) {
       data.replies = new Listing();
     }
-    data.replies.data.children.unshift(comment);
+    data.replies.data.children.push(comment);
     setData(data);
     setReplying(false);
   };
@@ -43,8 +38,7 @@ export default function(props) {
   const cancel = () => {
     setReplying(false);
   };
-  console.log(data.created_utc);
-  console.log(moment().unix());
+
   return (
     <li>
       <Wrapper ref={comment}>

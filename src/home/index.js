@@ -4,6 +4,7 @@ import { getAll } from "../services/reddit";
 
 export default function Home() {
   const [json, setJson] = useState([]);
+
   useEffect(() => {
     getAll().then(setJson);
   }, []);

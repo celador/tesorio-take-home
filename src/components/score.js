@@ -34,8 +34,11 @@ export default function({ score }) {
           }
         }}
       />
-      <div className="score">{numeral(value).format("0.0a")}</div>
-      {/* <div className="score">{value}</div> */}
+      {value >= 1000 ? (
+        <div className="score">{numeral(value).format("0.0a")}</div>
+      ) : (
+        <div className="score">{numeral(value).format("0")}</div>
+      )}
       <Vote
         kind="down"
         liked={liked}

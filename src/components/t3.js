@@ -3,47 +3,49 @@ import styled from "styled-components";
 import moment from "moment";
 import Thumb from "./thumbnail";
 import Score from "./score";
+import { Link } from "react-router-dom";
 
 export default function({ data }) {
   return (
     <li>
       <Post>
         <Score score={data.score} />
-        <A href={data.url}>
-          <Detail>
+        <Detail>
+          <A href={data.url}>
             <Thumbnail>
               <Thumb data={data} />
             </Thumbnail>
-            <Block>
+          </A>
+
+          <Block>
+            <A href={data.url}>
               <Description>
                 <Title>{data.title}</Title>
                 <Domain>({data.domain})</Domain>
               </Description>
-              <Row>
-                <Submission>
-                  <div>
-                    submitted {moment.unix(data.created_utc).fromNow()} hours
-                    ago by{" "}
-                    <Author>
-                      <a href={`https://www.reddit.com/user/${data.author}`}>
-                        {data.author}
-                      </a>
-                    </Author>{" "}
-                    to{" "}
-                    <Subreddit>
-                      <a href={`https://www.reddit.com/r/${data.subreddit}`}>
-                        r/{data.subreddit}
-                      </a>
-                    </Subreddit>
-                  </div>
-                  <a href={`https://www.reddit.com/${data.permalink}`}>
-                    {data.num_comments} comments
-                  </a>
-                </Submission>
-              </Row>
-            </Block>
-          </Detail>
-        </A>
+            </A>
+            <Row>
+              <Submission>
+                <div>
+                  submitted {moment.unix(data.created_utc).fromNow()}
+                  by{" "}
+                  <Author>
+                    <a href={`https://www.reddit.com/user/${data.author}`}>
+                      {data.author}
+                    </a>
+                  </Author>{" "}
+                  to{" "}
+                  <Subreddit>
+                    <a href={`https://www.reddit.com/r/${data.subreddit}`}>
+                      r/{data.subreddit}
+                    </a>
+                  </Subreddit>
+                </div>
+                <Link to={data.permalink}>{data.num_comments} comments</Link>
+              </Submission>
+            </Row>
+          </Block>
+        </Detail>
       </Post>
     </li>
   );

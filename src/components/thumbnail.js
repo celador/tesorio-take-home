@@ -5,7 +5,6 @@ export default function({ data }) {
 
   switch (data.thumbnail) {
     case "self":
-      console.log("self", data);
       return (
         <img
           height={50}
@@ -15,7 +14,6 @@ export default function({ data }) {
         ></img>
       );
     case "nsfw":
-      console.log("nsfw", data);
       return (
         <img
           height={70}
@@ -26,7 +24,6 @@ export default function({ data }) {
       );
 
     case "default":
-      console.log("default", data);
       return (
         <img
           height={50}
@@ -37,14 +34,12 @@ export default function({ data }) {
       );
 
     default:
-      console.log(thumbnail);
       return (
         <img
           height={data.thumbnail_height}
           width={data.thumbnail_width || 140}
           src={thumbnail}
           onError={() => {
-            console.log("IMG ERROR", data);
             setThumbnail("https://www.reddit.com/static/self_default.png");
           }}
           alt="thumbnail"

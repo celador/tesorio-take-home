@@ -19,12 +19,8 @@ export default function App() {
         </nav> */}
 
         <Switch>
-          <Route path="/detail">
-            <Detail />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+          <Route path="/" exact component={Home} />
+          <Route path="/:permalink*" component={Detail} />
         </Switch>
       </div>
     </Router>

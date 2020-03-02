@@ -41,3 +41,7 @@
   font-family: "redesignFont";
   src: local("redesignFont"), url(./assets/redesignFont.woff) format("woff");
 }
+
+ol {
+  padding-left: 1rem;
+}

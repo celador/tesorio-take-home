@@ -1,3 +1,5 @@
+Saturday
+
 This is supposed to take 3-4 hours. Production quality code takes longer than that. Therefore, I'm assuming I should be doing this as quickly as possible and some shortcuts will probably be taken.
 
 I am officially starting at 10:00 AM. I've already done some pre-work to update `npm` and bootstrap the app with Create-React-App. I'm picking this bootstrapper because it's the most popular, I've used it before, and it satisfies the take-home Guidelines up front.
@@ -38,7 +40,7 @@ Time to take a 5 minute break
 
 11:30 Back at it.
 
-12:00 Working with the posts contents, have to find a way to calculate the "tiome since posted" value. JavaScript and time is a pain, time to add moment with `yarn add moment`
+12:00 Working with the posts contents, have to find a way to calculate the "time since posted" value. JavaScript and time is a pain, time to add moment with `yarn add moment`
 
 12:10 Working with number formatting for score, lets bring in numeral with `yarn add numeral`
 
@@ -60,4 +62,21 @@ Time to take a 5 minute break
 
 2:45 Cleanup code and Add links for Author and Subreddit. Taking a break.
 
-3:05 Start click side up/down vote
+3:05 Start client side up/down vote. Needed to add a font I grabbed from Reddit to make the arrows.
+Having design assets would help, along with having colors. I think implementing something out of Abstract would be more realistic
+
+4:05 Finish client side up/down vote
+
+Monday
+
+One thing I've thought about was the part of the challenge that said not to worry about CSS. As a front-end engineer, I concern myself with HTML, CSS, and JavaScript. Each language provides its own ability to control the page and a good front-end engineer knows which language to use and when to use it. CSS is no less a front-end concern than JavaScript. Regardless... lets move on.
+
+8:15 Start on Detail (comments) page
+
+8:30 Working on fixing routing so I can accept a permalink and show the comments for it.
+
+8:45 Created Comment (t1) component and it shows Hello World properly
+
+9:25 Got recursive comments displaying.  Working on scoring and styling.
+
+9:35 Scoring works.  Starting work on replying to comments.

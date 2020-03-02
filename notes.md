@@ -69,7 +69,7 @@ Having design assets would help, along with having colors. I think implementing 
 
 Monday
 
-One thing I've thought about was the part of the challenge that said not to worry about CSS. As a front-end engineer, I concern myself with HTML, CSS, and JavaScript. Each language provides its own ability to control the page and a good front-end engineer knows which language to use and when to use it. CSS is no less a front-end concern than JavaScript. Regardless... lets move on.
+One thing I've thought about was the part of the challenge that said not to worry about CSS. As a frontend engineer, I concern myself with HTML, CSS, and JavaScript. Each language provides its own ability to control the page and a good frontend engineer knows which language to use and when to use it. CSS is no less a frontend concern than JavaScript. Regardless... lets move on.
 
 8:15 Start on Detail (comments) page
 
@@ -81,4 +81,6 @@ One thing I've thought about was the part of the challenge that said not to worr
 
 9:35 Scoring works.  Starting work on replying to comments.
 
-11:25 QA and finishing up. Taking a break.
+11:25 QA and finishing up.
+
+11:50 Fixed some issues with score propagation and cleanup of project.

@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Description
+
+This project is to satisfy the take-home project for the Senior Frontend position.  It consumes the Reddit API to get "All" and "Detail" pages for any post.
+
 ## Available Scripts
 
 In the project directory, you can run:
